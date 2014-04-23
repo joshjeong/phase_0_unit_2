@@ -9,8 +9,26 @@ def my_array_finding_method(source, thing_to_find)
   # Your code here!
 end
 
+def my_array_finding_method (array, ltr)
+    array.each do |x|
+        if x.to_s.include? ltr
+            puts x
+        end
+    end
+end
+
 def my_hash_finding_method(source, thing_to_find)
   # Your code here!
+end
+
+
+
+def my_hash_finding_method(hash, age)
+    hash.each do |k,v|
+        if v.to_s.include?(age.to_s)
+            puts k
+        end
+    end
 end
 
 # Identify and describe the ruby method you implemented. 
