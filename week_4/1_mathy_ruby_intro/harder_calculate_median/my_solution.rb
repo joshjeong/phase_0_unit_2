@@ -15,7 +15,15 @@
 
 # 2. Initial Solution
 
-
+def median(arr)
+  arr.sort!
+  if (arr.length%2==0)
+    # take middle two numbers, add those numbers together, divide by two
+    return ((arr[arr.length/2].to_f + (arr[(arr.length/2)-1]).to_f)/2).to_f
+  else
+    return arr[(arr.length-1)/2]
+  end
+end
 
 
 # 3. Refactored Solution

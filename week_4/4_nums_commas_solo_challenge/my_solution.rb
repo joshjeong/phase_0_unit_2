@@ -14,6 +14,21 @@
 
 # 2. Initial Solution
 
+def separate_comma(input)
+  number= input.to_s
+  if number.length>9
+    number.insert(-4,',')
+    number.insert(-8,',')
+    number.insert(-12,',') 
+  elsif number.length>6
+  	number.insert(-4,',')
+    number.insert(-8,',')
+  elsif number.length>3
+  	number.insert(-4,',')
+  else
+  	return number
+end
+end
 
 
 

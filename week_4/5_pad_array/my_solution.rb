@@ -16,6 +16,22 @@
 # 2. Initial Solution
 
 
+# number= arr.length
+# number> arrlength
+# my_array=[]
+
+class Array
+  def pad!(number, padding)
+  	(number - self.length).times {self.push(padding)}
+  	replace(self)
+  end
+
+
+  def pad(number, padding = nil)
+    dup.pad!(number, padding)
+  end
+end
+
 
 
 # 3. Refactored Solution
