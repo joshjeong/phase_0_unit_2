@@ -21,21 +21,36 @@
 # my_array=[]
 
 class Array
-  def pad!(number, padding)
-  	(number - self.length).times {self.push(padding)}
+  def pad!(number, padValue)
+  	(number - self.length).times do self.push(padValue) 
+  	end
   	replace(self)
+  	return(self)
   end
-
-
-  def pad(number, padding = nil)
-    dup.pad!(number, padding)
+  
+  def pad(number, padValue = nil)
+    duplicate= self.dup
+    (number - self.length).times do duplicate.push(padValue) 
+    end
+  return duplicate
   end
 end
 
 
 
 # 3. Refactored Solution
-
+class Array
+  def pad!(number, padValue)
+  	(number - self.length).times do self.push(padValue) 
+  	end
+  	replace(self)
+  	return(self)
+  end
+  
+  def pad(number, padValue = nil)
+    dup.pad!(number, padValue)
+  end
+end
 
 
 # 4. Reflection 
