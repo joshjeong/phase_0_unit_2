@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Austin Bourdier].
 
 # 1. Pseudocode
 
@@ -23,8 +23,9 @@ Pass array 1 with no errors
 Pass array 2 with no errors
 
 Define sentence_maker() as a method
-sentence_maker() takes on a single argument
-sentence_maker() 
+Capitalize first word of array
+Iterate through rest the elements in array to print itself and a space before it.
+After the last element in array, print a period at the end.
 
 # 2. Initial Solution
 
@@ -58,3 +59,18 @@ end
 
 
 # 4. Reflection 
+# What parts of your strategy worked? What problems did you face?
+# -It was a little tricky figuring out how to add a period at the end of the sentence. Using a conditional statement and 
+# a count, it succeeded in passing the rspec.
+# What questions did you have while coding? What resources did you find to help you answer them?
+# -No resources were used, only trial and error.
+# What concepts are you having trouble with, or did you just figure something out? If so, what?
+# -Feel very comfortable using .each now
+# Did you learn any new skills or tricks?
+# -First time using count in a .each 
+# How confident are you with each of the Learning Competencies?
+# -Solid
+# Which parts of the challenge did you enjoy?
+# -The sentence maker was fun and a good little puzzle
+# Which parts of the challenge did you find tedious?
+# -None in this challenge
