@@ -46,20 +46,54 @@ def my_hash_modification_method(source, thing_to_modify)
     return source
 end
 
-
-# Person 3 [Did not receive from members of group]
-def my_array_sorting_method(source)
-  # Your code here!
-end
-
-def my_hash_sorting_method(source)
-  # Your code here!
-end
-
 # Identify and describe the ruby method you implemented. 
+# I implemented two different methods for my part of the project.
+# 1. The first method I implemented was the .is_a? method. This checks to see if the
+# object being tested (directly before the .is_a?) is a member of the class directly after it.
+# In this case, I was checking to see if the items in the array were integers before modifying them.
+# 2. The second method I implemented was .index(). This method finds the index of a value already in 
 
 
-# Person 4 [Did not receive from members of group]
+# Person 3
+ def my_array_sorting_method(source)
+ +      temp_arr = []
+ +      arr.each do |x|
+ +          temp_arr.push(x.to_s)
+ +      end
+ +      temp_arr.sort
+ +  end
+ +  
+ +  def my_hash_sorting_method(source)
+ +      temp_arr = []
+ +      
+ +      # first method.. dont quite understand this. got it from rubydocs (http://ruby-doc.org/core-1.8.6/Hash.html#method-i-sort)
+ +      #arr.sort do |k,v| 
+ +      #    k[1] <=> v[1]
+ +      #end
+ +      
+ +      arr.each do |k,v|
+ +          temp_arr.push([v,k])
+ +      end
+ +      temp_arr = temp_arr.sort
+ +      temp_arr.each do |v|
+ +          temp = v[0]
+ +          v[0] = v[1]
+ +          v[1] = temp
+ +      end
+ +      temp_arr
+ +  end
+  
+  # Identify and describe the ruby method you implemented. 
+ -# 
+  #
+ +# For this problem, I used two special ruby methods: to_s & sort.
+ +# I initially created a different method for the my_hash_sorting_method.. but I don't quite understand how it works! So I made another one that is less "magical". If someone can explain how that method works I will be happy to listen!
+ +# By the way, it seems the driver code is failing for the functions I made.. but it looks like this is because the array has been modified.
+ +# Can someone please confirm this? Or did I read the instructions wrong?
+  #
+ +# I will revisit this problem tomorrow morning with a fresh mind to confirm.
+ 
+ # Person 4 [Did not receive from group member]
 def my_array_deletion_method(source, thing_to_delete)
   #Your code here!
 end
@@ -69,6 +103,9 @@ def my_hash_deletion_method(source, thing_to_delete)
 end
 
 # Identify and describe the ruby method you implemented. 
+# 
+#
+#
 
 
 
