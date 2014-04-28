@@ -6,52 +6,48 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
-end
-
-def my_array_finding_method (array, ltr)
-    array.each do |x|
-        if x.to_s.include? ltr
+     source.each do |x|
+        if x.to_s.include? thing_to_find
             puts x
         end
     end
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
-end
-
-
-
-def my_hash_finding_method(hash, age)
-    hash.each do |k,v|
-        if v.to_s.include?(age.to_s)
+      source.each do |k,v|
+        if v.to_s.include?(thing_to_find.to_s)
             puts k
         end
     end
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
+#.each- iterates through each element in array
+#.to_s- converts value to a string
+#.include?()- checks if value is included in array
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+    source.each do |x|
+        if x.is_a? Integer
+    source.each do |x,y|
+          numb = source.index(x)
+          source[numb] += thing_to_modify
+        end
+    end
+    return source
 end
 
-def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+def my_hash_modification_method(source, thing_to_modify) 
+        if y.is_a? Integer
+            numb= source.index(y)
+            source[numb]+=thing_to_modify
+        end
+    end
+    return source
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
 
-
-# Person 3
+# Person 3 [Did not receive from members of group]
 def my_array_sorting_method(source)
   # Your code here!
 end
@@ -61,12 +57,9 @@ def my_hash_sorting_method(source)
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
 
 
-# Person 4
+# Person 4 [Did not receive from members of group]
 def my_array_deletion_method(source, thing_to_delete)
   #Your code here!
 end
@@ -76,9 +69,7 @@ def my_hash_deletion_method(source, thing_to_delete)
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+
 
 
 ################## DRIVER CODE ###################################
@@ -96,8 +87,17 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
-# 
-# 
-# 
+# What parts of your strategy worked? What problems did you face?
+#- I had to use google to find a method that would search for a specific letter
+# What questions did you have while coding? What resources did you find to help you answer them?
+#- I used multiple sites to learn .include?()
+# What concepts are you having trouble with, or did you just figure something out? If so, what?
+#- None after reading up on .include
+# Did you learn any new skills or tricks?
+#- .include?()
+# How confident are you with each of the Learning Competencies?
+#- Muy bueno
+# Which parts of the challenge did you enjoy?
+#- Learning a new finding method
+# Which parts of the challenge did you find tedious?
+#- None
