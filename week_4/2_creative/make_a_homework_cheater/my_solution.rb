@@ -5,9 +5,6 @@
 
 # 2. Pseudocode
 
-# Input:
-# Output:
-# Steps:
 # def method essay_writer
 # pass several arguments: title, person, place, topic, date, thesis
 # create a template and use interpolation to call argument
@@ -20,22 +17,23 @@ end
 essay_writer("Father of Rap: 2Pac","Tupac Shakur", "Las Vegas","Hip Hop","1996","He changed an era with his lyrics and actions altering the course of the industry.")
 
 
-# 4. Refactored Solution
-
-
-Father of Rap: 2Pac: The life of Tupac Shakur can be described as impactful. Hip Hop was changed forever and a legend was created. Unfortunately, Tupac Shakur's life was cut short on 1996 in Las Vegas. He changed an era with his lyrics and actions altering the course of the industry.
-
-
-
-
-
-# 1. DRIVER TESTS GO BELOW THIS LINE
-
-
 
 
 
 
 # 5. Reflection 
+What parts of your strategy worked? What problems did you face?
+Using interpolation allowed me to call the argument exactly where I wanted to.
+What questions did you have while coding? What resources did you find to help you answer them?
+None
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+None
+Did you learn any new skills or tricks?
+Creating a tab
+How confident are you with each of the Learning Competencies?
+Good good
+Which parts of the challenge did you enjoy?
+First time creating a template
+
 
 
