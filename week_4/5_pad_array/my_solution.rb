@@ -4,14 +4,15 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 # 1. Pseudocode
 
-# What is the input?
-# What is the output? (i.e. What should the code return?)
-# What are the steps needed to solve the problem?
-
+define a class Array
+define two methods pad and pad!
+they will pass two arguments- number of times, and pad value
+it will take the difference between length of array and agrument number
+pad value will be added to array x amount of times (the difference)
 
 # 2. Initial Solution
 
@@ -53,4 +54,6 @@ class Array
 end
 
 
-# 4. Reflection 
+# # 4. Reflection 
+# A lot of research was required for this challenge. I've never used self, dup, or replace.
+# I'm still not confident with these methods but it was good being exposed to them. 
