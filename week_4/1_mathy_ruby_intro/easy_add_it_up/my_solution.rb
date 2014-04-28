@@ -12,20 +12,20 @@
 # What is the output? (i.e. What should the code return?)
 # What are the steps needed to solve the problem?
 
-Define total() as a method
-Pass a single argument through total()
-total() takes an array and adds values in array
-Set sum equal to zero
-Use .each to cycle through each value in array
-Set sum equal to previous sum plus value in array
-Return sum
-Pass array 1 with no errors
-Pass array 2 with no errors
+# Define total() as a method
+# Pass a single argument through total()
+# total() takes an array and adds values in array
+# Set sum equal to zero
+# Use .each to cycle through each value in array
+# Set sum equal to previous sum plus value in array
+# Return sum
+# Pass array 1 with no errors
+# Pass array 2 with no errors
 
-Define sentence_maker() as a method
-Capitalize first word of array
-Iterate through rest the elements in array to print itself and a space before it.
-After the last element in array, print a period at the end.
+# Define sentence_maker() as a method
+# Capitalize first word of array
+# Iterate through rest the elements in array to print itself and a space before it.
+# After the last element in array, print a period at the end.
 
 # 2. Initial Solution
 
