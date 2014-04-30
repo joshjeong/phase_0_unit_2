@@ -50,7 +50,7 @@ class Die
   
   def roll
   	(1..@sides).to_a.sample # found a way to select random number with one line
-  end						# it also made the code faster
+  end						       # it also made the code faster
 end
 
 
