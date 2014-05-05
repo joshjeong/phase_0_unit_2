@@ -58,6 +58,9 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
+puts card= CreditCard.new(4408043234567893).check_card #false
+puts card= CreditCard.new(4563960122001999).check_card #true 
+puts card= CreditCard.new(1023984839273748).check_card #false
 
 
 
