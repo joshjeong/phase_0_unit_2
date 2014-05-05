@@ -38,7 +38,7 @@ end
 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+col(boggle_board, 1) # => ["r", "o", "c", "a"]
 
 # Reflection 
 
