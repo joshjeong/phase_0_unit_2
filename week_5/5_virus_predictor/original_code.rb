@@ -3,8 +3,7 @@
 # I worked on this challenge [by myself, with: ].
 
 # EXPLANATION OF require_relative
-#
-#
+#This selects a file to use and reference to
 require_relative 'state_data'
 
 class VirusPredictor
@@ -17,12 +16,15 @@ class VirusPredictor
     @next_region = regional_spread
   end
 
-  def virus_effects  #HINT: What is the SCOPE of instance variables?
+  def virus_effects  #HINT: What is the SCOPE of instance variables? Scope is within the class
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+           #private makes it so the method is only accessible within the context of the current object
+           #If it was placed above the virus_effects, VirusPredictor.virus_deaths and VirusPredictor.predicted_deaths 
+           #could not be called outside the object
 
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
