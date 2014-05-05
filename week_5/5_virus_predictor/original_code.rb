@@ -26,7 +26,7 @@ class VirusPredictor
            #If it was placed above the virus_effects, VirusPredictor.virus_deaths and VirusPredictor.predicted_deaths 
            #could not be called outside the object
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths(population_density, population, state) #based on population size, it will calc number of deaths
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -43,7 +43,7 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread(population_density, state) #based on population density, it will set speed in months
     speed = 0.0
 
     if @population_density >= 200
