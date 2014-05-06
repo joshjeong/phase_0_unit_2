@@ -1,10 +1,11 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
+#Two different hash syntax being used are hash rocket and a new style similar to JSON
 
-# EXPLANATION OF require_relative
-#This selects a file to use and reference to
+# EXPLANATION OF require_relative- This selects a file to use and reference to
 require_relative 'state_data'
+
 
 class VirusPredictor
 
@@ -81,3 +82,8 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 alaska.virus_effects
+
+#will iterate through all the states in STATE_DATA
+STATE_DATA.each_key { |state|
+  VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population], STATE_DATA[state][:region], STATE_DATA[state][:regional_spread]).virus_effects
+}
