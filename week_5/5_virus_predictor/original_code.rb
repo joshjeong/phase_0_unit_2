@@ -3,9 +3,72 @@
 # I worked on this challenge [by myself].
 #Two different hash syntax being used are hash rocket and a new style similar to JSON
 
-# EXPLANATION OF require_relative- This selects a file to use and reference to
-require_relative 'state_data'
+# # EXPLANATION OF require_relative- This selects a file to use and reference to
+# require_relative 'state_data'
 
+
+# class VirusPredictor
+
+#   def initialize(state_of_origin, population_density, population, region, regional_spread)
+#     @state = state_of_origin
+#     @population = population
+#     @population_density = population_density
+#     @region = region
+#     @next_region = regional_spread
+#   end
+
+#   def virus_effects  #HINT: What is the SCOPE of instance variables? Scope is within the class
+#     predicted_deaths(@population_density, @population, @state)
+#     speed_of_spread(@population_density, @state)
+#   end
+
+#   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+#           #private makes it so the method is only accessible within the context of the current object
+#           #If it was placed above the virus_effects, VirusPredictor.virus_deaths and VirusPredictor.predicted_deaths 
+#           #could not be called outside the object
+
+#   def predicted_deaths(population_density, population, state) #based on population size, it will calc number of deaths
+#     if @population_density >= 200
+#       number_of_deaths = (@population * 0.4).floor
+#     elsif @population_density >= 150
+#       number_of_deaths = (@population * 0.3).floor
+#     elsif @population_density >= 100
+#       number_of_deaths = (@population * 0.2).floor
+#     elsif @population_density >= 50
+#       number_of_deaths = (@population * 0.1).floor
+#     else 
+#       number_of_deaths = (@population * 0.05).floor
+#     end
+
+#     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+
+#   end
+
+#   def speed_of_spread(population_density, state) #based on population density, it will set speed in months
+#     speed = 0.0
+
+#     if @population_density >= 200
+#       speed += 0.5
+#     elsif @population_density >= 150
+#       speed += 1
+#     elsif @population_density >= 100
+#       speed += 1.5
+#     elsif @population_density >= 50
+#       speed += 2
+#     else 
+#       speed += 2.5
+#     end
+
+#     puts " and will spread across the state in #{speed} months.\n\n"
+
+#   end
+
+# end
+
+#=======================================================================
+#Refactored code
+
+require_relative 'state_data'
 
 class VirusPredictor
 
@@ -17,56 +80,39 @@ class VirusPredictor
     @next_region = regional_spread
   end
 
-  def virus_effects  #HINT: What is the SCOPE of instance variables? Scope is within the class
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+  def virus_effects 
+    predicted_deaths_speed(@population_density, @population, @state) #combined predicted death and speed
   end
 
-  private  #what is this?  what happens if it were cut and pasted above the virus_effects method
-           #private makes it so the method is only accessible within the context of the current object
-           #If it was placed above the virus_effects, VirusPredictor.virus_deaths and VirusPredictor.predicted_deaths 
-           #could not be called outside the object
+  private 
 
-  def predicted_deaths(population_density, population, state) #based on population size, it will calc number of deaths
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else 
-      number_of_deaths = (@population * 0.05).floor
+  def predicted_deaths_speed(population_density, population, state) # added speed to be included in number of deaths
+                                                                    # because they had same population dens thresholds
+    speed= 0.0
+      if @population_density >= 200
+        number_of_deaths = (@population * 0.4).floor
+        speed += 0.5
+      elsif @population_density >= 150
+        number_of_deaths = (@population * 0.3).floor
+        speed += 1
+      elsif @population_density >= 100
+        number_of_deaths = (@population * 0.2).floor
+        speed += 1.5
+      elsif @population_density >= 50
+        number_of_deaths = (@population * 0.1).floor
+        speed += 2
+      else 
+        number_of_deaths = (@population * 0.05).floor
+        speed += 2.5
+      end
+  
+      print "#{@state} will lose #{number_of_deaths} people in this outbreak and 
+      will spread across the state in #{speed} months.\n\n"
+  
     end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
+  
   end
-
-  def speed_of_spread(population_density, state) #based on population density, it will set speed in months
-    speed = 0.0
-
-    if @population_density >= 200
-      speed += 0.5
-    elsif @population_density >= 150
-      speed += 1
-    elsif @population_density >= 100
-      speed += 1.5
-    elsif @population_density >= 50
-      speed += 2
-    else 
-      speed += 2.5
-    end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
-  end
-
-end
-
-#=======================================================================
-
+#==============================================================================================================
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
