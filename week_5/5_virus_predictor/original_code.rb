@@ -106,20 +106,19 @@ class VirusPredictor
         speed += 2.5
       end
   
-      print "#{@state} will lose #{number_of_deaths} people in this outbreak and 
-      will spread across the state in #{speed} months.\n\n"
+      print "#{@state} will lose #{number_of_deaths} people in this outbreak and will spread across the state in #{speed} months.\n\n"
   
     end
   
   end
 #==============================================================================================================
 # DRIVER CODE
- # initialize VirusPredictor for each state
-
-
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population], STATE_DATA["Alabama"][:region], STATE_DATA["Alabama"][:regional_spread]) 
 alabama.virus_effects
+alabama== "Alabama will lose 482202 people in this outbreak and will spread across the state in 2.0 months."
 
+ # initialize VirusPredictor for each state
+ 
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population], STATE_DATA["New Jersey"][:region], STATE_DATA["New Jersey"][:regional_spread]) 
 jersey.virus_effects
 
@@ -133,3 +132,20 @@ alaska.virus_effects
 STATE_DATA.each_key { |state|
   VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population], STATE_DATA[state][:region], STATE_DATA[state][:regional_spread]).virus_effects
 }
+
+#REFLECTION
+What parts of your strategy worked? What problems did you face?
+Fully understanding each line of the code is really important before trying to simplify.
+It took me a while to see how I could refactor the death and speed rate.
+What questions did you have while coding? What resources did you find to help you answer them?
+I had to review .each_key
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+none in this section
+Did you learn any new skills or tricks?
+private
+How confident are you with each of the Learning Competencies?
+Very good
+Which parts of the challenge did you enjoy?
+I enjoyed looking at an existing code and trying to find a way to improve it.
+Which parts of the challenge did you find tedious?
+None
