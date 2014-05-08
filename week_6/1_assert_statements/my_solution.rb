@@ -1,6 +1,6 @@
 # U2.W6: Testing Assert Statements
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Brendan Susens- Jackson ].
 
 
 # 2. Review the simple assert statement
@@ -22,38 +22,38 @@
 
 # 3. Copy your selected challenge here
 class CreditCard
-  def initialize(cardNumb)
-  	@cardNumb= cardNumb.to_s
-    if @cardNumb.length != 16
-      raise ArgumentError
+	
+	def initialize(number)
+		
+		@number = number.to_s.split(//).map {|chr| chr.to_i}
+		# unless @number.count == 16
+		if @number.count < 16 || @number.count > 16
+			raise ArgumentError.new( false, "Card number can't have less than 16!")
+		end
+		
+		# else
+		#     check_card
+		# end
+	end
+
+	def check_card
+  		number_array = @number
+  		sum = number_array.each_with_index.map {|num, i| num if i.odd? }
+  		sum.compact!
+  		sum = sum.inject(:+)
+  		number_array = number_array.each_with_index.map { |num, i| num if i.even?} 
+  		number_array.compact!
+  		number_array.each do |even_num| 
+        	double = even_num * 2 
+          		if double > 9 
+          		double.to_s.split(//).map{|x| sum += x.to_i }
+          		end
+        	sum += double if double <= 9
+      	end
+  
+		sum % 10 == 0 ? true : false
+
   	end
-  end
-
-  def check_card
-    arr_math=[]
-  	arr=@cardNumb.split("")
-    arr.each_with_index {|number, index|
-    if index%2 ==0
-      arr_math << number.to_i*2
-    else 
-      arr_math << number.to_i
-    end
-    }
-    arr_join= Integer arr_math.join
-    arr_string= String arr_join
-    total= arr_string.split("")
-    sum= 0
-    total.each {|x|
-      sum+=x.to_i
-    }
-    if sum%10==0
-      return true
-    else 
-      false
-    end
-  end
-
-
 end
 
 # DRIVER TESTS GO BELOW THIS LINE
