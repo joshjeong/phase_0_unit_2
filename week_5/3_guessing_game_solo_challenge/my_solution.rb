@@ -94,5 +94,3 @@ end
 
 
 # 5. Reflection 
-#I'm stumped as to why I can't get my code to run. I feel as though I started strong and got a little lost when it came 
-#to the input method. 
