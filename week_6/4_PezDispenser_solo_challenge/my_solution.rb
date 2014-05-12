@@ -15,25 +15,41 @@
 
 
 # 2. Pseudocode
-
-
+# flavors is an array of different flavors the pez contains
+# see_all_pez will print out values in array flavors
+# add_pez will add a flavor to array flavors
+# pez_count is length of flavors
+# get_pez will randomly select a flavor from array
 
 # 3. Initial Solution
 
 class PezDispenser
  
-# your code here!
- 
+  def initialize(flavors)
+	@flavors= flavors
+  end
+
+  def see_all_pez
+  	p @flavors
+  end
+
+  def add_pez(new_flavor)
+  	@flavors << new_flavor
+  end
+  
+  def pez_count
+  	@flavors.length
+  end
+
+  def get_pez
+  	pez_dispensed= @flavors.sample
+  	@flavors.delete_at(@flavors.find_index(pez_dispensed))
+  	end
 end
- 
 
 
 # 4. Refactored Solution
-
-
-
-
-
+# Code already seems pretty DRY. I couldn't figure out how to make get_pez a litte cleaner.
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
@@ -53,3 +69,4 @@ puts "Now you have #{super_mario.pez_count} pez!"
 
 
 # 5. Reflection 
+I enjoyed starting from the Driver test and working backwards. 

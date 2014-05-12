@@ -14,6 +14,42 @@
 
 
 # Refactored Solution
+class Song
+	def initialize(song_name, artist)
+		@song_name= song_name
+		@artist= artist
+	end
+
+end
+
+class Playlist
+
+  def initialize(track)
+  	@track= track
+  end
+
+  def add
+	@playlist_arr << @track
+  end
+
+  def play_all
+  end
+
+  def remove
+  	@playlist_arr.delete_if {|x|= @track}
+  end
+
+  def display
+    playlist_arr.each do |song, artist|
+	p song- artist
+  end
+
+
+  def num_of_tracks
+	playlist_arr.length
+  end
+
+end
 
 
 
