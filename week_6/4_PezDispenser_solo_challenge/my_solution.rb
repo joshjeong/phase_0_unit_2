@@ -68,5 +68,6 @@ puts "Now you have #{super_mario.pez_count} pez!"
 
 
 
-# 5. Reflection 
-I enjoyed starting from the Driver test and working backwards. 
+# # 5. Reflection 
+# I enjoyed starting from the Driver test and working backwards. I'm slowly getting more comfortable with creating new 
+# objects and following the syntax.
