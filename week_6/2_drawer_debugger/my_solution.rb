@@ -1,7 +1,7 @@
 # U2.W6: Drawer Debugger
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 
 # 2. Original Code
@@ -106,11 +106,9 @@ silverware_drawer.view_contents
 #BONUS SECTION
 # puts fork.clean
 
-# DRIVER TESTS GO BELOW THIS LINE
-
-
-
-
 
 
 # 5. Reflection 
+# Debugging challenges are always fun because I feel as though similar situations will be faced in the real world.
+# We will be given a code that has been completed by someone else and needs to be fixed. In this challenge, I had some trouble
+# when it came to the fork portion. I kept getting an error and later realized it was because the drawer was empty.
