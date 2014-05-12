@@ -34,7 +34,7 @@
   #    end
   
 	# sum % 10 == 0 ? true : false
-	end
+	# end
 
 
 
@@ -80,3 +80,6 @@ assert { card3.check_card }
 
 
 # Reflection 
+# Rafactoring this code was a great challenge! I had an awesome time working with Brendan as we brainstormed different 
+# ways to improve our code. We researched while at time did things by trial and error. The most difficult part of this 
+# challenge was doubling the even indexes in a simple and clean fashion. 
