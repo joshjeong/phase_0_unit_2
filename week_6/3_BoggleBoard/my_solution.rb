@@ -84,6 +84,6 @@ p BoggleBoard.new(dice_grid).get_col(3)
 p BoggleBoard.new(dice_grid).create_word([3,0], [0,2], [2,2], [3,2])
 
 
-# 5. Reflection 
-Since this challenge was based on a previous one, it was not too dificult to translate. The challenge was 
-converting the variables to cover the scope of the class and to get the dice_grid to pass through the methods.
+# # 5. Reflection 
+# Since this challenge was based on a previous one, it was not too dificult to translate. The challenge was 
+# converting the variables to cover the scope of the class and to get the dice_grid to pass through the methods.
