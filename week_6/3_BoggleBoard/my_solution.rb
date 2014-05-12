@@ -5,11 +5,15 @@
 
 
 # 2. Pseudocode
+# def class BoggleBoard
+# use methods from previous challegne:
+# - find letters according to coordinates
+# - get row
+# - get column
 
 
 
 # 3. Initial Solution
-<<<<<<< HEAD
 # class BoggleBoard
 
 #   def initialize(dice_grid)
@@ -29,30 +33,6 @@
 #   end
  
 # end
-=======
-class BoggleBoard
- 
- def initialize(board)
-  @board= board
- end
- 
-   def create_word(board, *coords)
-    board= @board
-    coords.map { |coord| board[coord.first][coord.last]}.join("")
-  end
- 
- def row(source, number)
-    source[number].to_a
-end
-
-def col(source, numb)
-	source.map { |x| 
-		x[numb]
-	}
-end
-
-end
->>>>>>> FETCH_HEAD
  
  
 dice_grid = [["b", "r", "a", "e"],
@@ -105,3 +85,5 @@ p BoggleBoard.new(dice_grid).create_word([3,0], [0,2], [2,2], [3,2])
 
 
 # 5. Reflection 
+Since this challenge was based on a previous one, it was not too dificult to translate. The challenge was 
+converting the variables to cover the scope of the class and to get the dice_grid to pass through the methods.
