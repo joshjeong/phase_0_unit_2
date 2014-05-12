@@ -9,6 +9,7 @@
 
 
 # 3. Initial Solution
+<<<<<<< HEAD
 # class BoggleBoard
 
 #   def initialize(dice_grid)
@@ -28,6 +29,30 @@
 #   end
  
 # end
+=======
+class BoggleBoard
+ 
+ def initialize(board)
+  @board= board
+ end
+ 
+   def create_word(board, *coords)
+    board= @board
+    coords.map { |coord| board[coord.first][coord.last]}.join("")
+  end
+ 
+ def row(source, number)
+    source[number].to_a
+end
+
+def col(source, numb)
+	source.map { |x| 
+		x[numb]
+	}
+end
+
+end
+>>>>>>> FETCH_HEAD
  
  
 dice_grid = [["b", "r", "a", "e"],
